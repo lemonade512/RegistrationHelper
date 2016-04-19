@@ -1,39 +1,28 @@
-print Beginning Social Dance - Men
-check 11990-11997
+print
+print Number 1 Schedule
+check 16530
+check 16480
+check 53470
+check 38495
+check 16580
 
 print
-print Operating Systems
-check 16785
+print Number 2 Schedule
+check 16530
+check 16655
+check 53450
+check 38780
+check 16580
 
 print
-print Current Desired Schedule
-check 11997
-check 16710
-check 16545
-check 16585
-check 38485
-check 16505
+print Number 3 Schedule
+check 16480
+check 16655
+check 53600
+check 38495
+check 16580
 
 print
-print Probability and Random Processes
-check 16545-16550
+print Senior Design Project
+check 16580-16610
 
-print
-print Intro to Engineering Design
-check 16690-16710
-
-print
-print Embedded Systems Design Lab
-check 16495-16520
-
-print
-print History of US Foreign Relations
-check 38485
-
-print
-print Algorithms
-check 16580-16585
-
-print
-print Main Currents in American Culture since 1865
-check 38645-38650

@@ -14,6 +14,7 @@ except:
 
 registrar_url = "https://utdirect.utexas.edu/apps/registrar/course_schedule"
 fall_2015_str = "20159"
+spring_2016_str = "20162"
 
 class HTTPException(Exception):
     pass
@@ -31,8 +32,8 @@ def login():
 
 def request_unique_range(session, start, finish):
     assert start < finish
-    url = registrar_url + "/" + fall_2015_str + "/results/?search_type_main=UNIQUE&ccyys="
-    url += fall_2015_str + "&start_unique=" + str(start) + "&end_unique=" + str(finish)
+    url = registrar_url + "/" + spring_2016_str + "/results/?search_type_main=UNIQUE&ccyys="
+    url += spring_2016_str + "&start_unique=" + str(start) + "&end_unique=" + str(finish)
     r = session.get(url)
     if r.status_code != 200:
         raise HTTPException("Got status code: " + str(r.status_code) + " when requesting unique range.")
@@ -61,7 +62,7 @@ def request_unique_range(session, start, finish):
 
 def request_unique(session, num):
     unique = str(num)
-    url = registrar_url + "/" + fall_2015_str + "/" + str(num)
+    url = registrar_url + "/" + spring_2016_str + "/" + str(num)
 
     r = session.get(url)
     if r.status_code != 200:
@@ -198,8 +199,8 @@ def print_status(status):
     #print string
 
 s = login()
-#parse_file(s, 'schedule.txt')
-parse_file(s, 'op_systems.txt')
+parse_file(s, 'schedule.txt')
+#parse_file(s, 'op_systems.txt')
 #statuses = request_unique(s, 16450)
 #statuses += request_unique_range(s, 11990, 11997)
 #print set(statuses)
