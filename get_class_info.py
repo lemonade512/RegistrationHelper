@@ -15,6 +15,7 @@ except:
 registrar_url = "https://utdirect.utexas.edu/apps/registrar/course_schedule"
 fall_2015_str = "20159"
 spring_2016_str = "20162"
+fall_2016_str = "20169"
 
 class HTTPException(Exception):
     pass
@@ -32,8 +33,8 @@ def login():
 
 def request_unique_range(session, start, finish):
     assert start < finish
-    url = registrar_url + "/" + spring_2016_str + "/results/?search_type_main=UNIQUE&ccyys="
-    url += spring_2016_str + "&start_unique=" + str(start) + "&end_unique=" + str(finish)
+    url = registrar_url + "/" + fall_2016_str + "/results/?search_type_main=UNIQUE&ccyys="
+    url += fall_2016_str + "&start_unique=" + str(start) + "&end_unique=" + str(finish)
     r = session.get(url)
     if r.status_code != 200:
         raise HTTPException("Got status code: " + str(r.status_code) + " when requesting unique range.")
@@ -62,7 +63,7 @@ def request_unique_range(session, start, finish):
 
 def request_unique(session, num):
     unique = str(num)
-    url = registrar_url + "/" + spring_2016_str + "/" + str(num)
+    url = registrar_url + "/" + fall_2016_str + "/" + str(num)
 
     r = session.get(url)
     if r.status_code != 200:

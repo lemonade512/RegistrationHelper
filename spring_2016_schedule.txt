@@ -1,0 +1,28 @@
+print
+print Number 1 Schedule
+check 16530
+check 16480
+check 53470
+check 38495
+check 16580
+
+print
+print Number 2 Schedule
+check 16530
+check 16655
+check 53450
+check 38780
+check 16580
+
+print
+print Number 3 Schedule
+check 16480
+check 16655
+check 53600
+check 38495
+check 16580
+
+print
+print Senior Design Project
+check 16580-16610
+
